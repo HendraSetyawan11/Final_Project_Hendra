@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animasi Warna Teks Tugas Hendra</title>
+<style>
+  #animated-paragraph {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <p id="animated-paragraph">Manipulasi DOM Pada Paragraf dengan Animasi Warna Tugas 6 Prakerja
+    <br>
+    Manipulasi DOM Pada Paragraf dengan Animasi Warna Tugas 6 Prakerja
+    <br>
+    Manipulasi DOM Pada Paragraf dengan Animasi Warna Tugas 6 Prakerja</p>
+   <script>
+    const paragraph = document.getElementById("animated-paragraph"); 
+    const colors = ["red", "green", "blue", "orange", "purple"];
+    let colorIndex = 0;
+
+    function changeColor() {
+      paragraph.style.color = colors[colorIndex];
+      colorIndex = (colorIndex + 1) % colors.length;
+    }
+
+    setInterval(changeColor, 1000); // Ubah warna setiap 1 detik
+  </script>
+</body>
+</html>
